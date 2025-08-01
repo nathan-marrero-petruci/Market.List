@@ -1,0 +1,14 @@
+D:\Projects\Market.List\bin\Debug\net9.0\Market.List.exe
+D:\Projects\Market.List\bin\Debug\net9.0\Market.List.deps.json
+D:\Projects\Market.List\bin\Debug\net9.0\Market.List.runtimeconfig.json
+D:\Projects\Market.List\bin\Debug\net9.0\Market.List.dll
+D:\Projects\Market.List\bin\Debug\net9.0\Market.List.pdb
+D:\Projects\Market.List\obj\Debug\net9.0\Market.List.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Market.List\obj\Debug\net9.0\Market.List.AssemblyInfoInputs.cache
+D:\Projects\Market.List\obj\Debug\net9.0\Market.List.AssemblyInfo.cs
+D:\Projects\Market.List\obj\Debug\net9.0\Market.List.csproj.CoreCompileInputs.cache
+D:\Projects\Market.List\obj\Debug\net9.0\Market.List.dll
+D:\Projects\Market.List\obj\Debug\net9.0\refint\Market.List.dll
+D:\Projects\Market.List\obj\Debug\net9.0\Market.List.pdb
+D:\Projects\Market.List\obj\Debug\net9.0\Market.List.genruntimeconfig.cache
+D:\Projects\Market.List\obj\Debug\net9.0\ref\Market.List.dll
