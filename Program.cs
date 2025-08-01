@@ -1,10 +1,11 @@
 ﻿
+
 using System;
-using System.Collections.Generic;
+using Market.List;
 
 class Program
 {
-    static List<string> listaDeCompras = new List<string>();
+    static ListaDeCompras lista = new ListaDeCompras();
 
     static void Main(string[] args)
     {
@@ -42,11 +43,11 @@ class Program
     static void AdicionarItem()
     {
         Console.Write("Digite o nome do item: ");
-        var item = Console.ReadLine();
-        if (!string.IsNullOrWhiteSpace(item))
+        var nome = Console.ReadLine();
+        if (!string.IsNullOrWhiteSpace(nome))
         {
-            listaDeCompras.Add(item);
-            Console.WriteLine($"Item '{item}' adicionado!");
+            lista.Adicionar(new Item(nome));
+            Console.WriteLine($"Item '{nome}' adicionado!");
         }
         else
         {
@@ -57,12 +58,14 @@ class Program
     static void RemoverItem()
     {
         ListarItens();
+        if (lista.Contar() == 0)
+            return;
         Console.Write("Digite o número do item para remover: ");
-        if (int.TryParse(Console.ReadLine(), out int indice) && indice > 0 && indice <= listaDeCompras.Count)
+        if (int.TryParse(Console.ReadLine(), out int indice) && indice > 0 && indice <= lista.Contar())
         {
-            string removido = listaDeCompras[indice - 1];
-            listaDeCompras.RemoveAt(indice - 1);
-            Console.WriteLine($"Item '{removido}' removido!");
+            var itemRemovido = lista.Listar()[indice - 1].Nome;
+            lista.Remover(indice - 1);
+            Console.WriteLine($"Item '{itemRemovido}' removido!");
         }
         else
         {
@@ -72,16 +75,17 @@ class Program
 
     static void ListarItens()
     {
-        if (listaDeCompras.Count == 0)
+        var itens = lista.Listar();
+        if (itens.Count == 0)
         {
             Console.WriteLine("A lista está vazia.");
         }
         else
         {
             Console.WriteLine("Itens na lista:");
-            for (int i = 0; i < listaDeCompras.Count; i++)
+            for (int i = 0; i < itens.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {listaDeCompras[i]}");
+                Console.WriteLine($"{i + 1}. {itens[i].Nome}");
             }
         }
     }
